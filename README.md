@@ -4,5 +4,6 @@
 ### Instalações necessárias para a API funcionar:
 
 ° pip install flask
+
 ° pip install db-sqlite3
 
