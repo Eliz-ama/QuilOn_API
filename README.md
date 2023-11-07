@@ -7,3 +7,13 @@
 
 ° pip install db-sqlite3
 
+### Para executar inicie o comando:
+
+py API.py
+
+### Para vizualizar o Banco de dados recomendo que baixe a esteção:
+
+° Sqlite
+
+
+
