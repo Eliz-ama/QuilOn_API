@@ -54,6 +54,32 @@ def get_products():
     connection.close()
     return jsonify({'products': products})
 
+# Rota para obter os detalhes de um produto específico
+@app.route('/product/<int:product_id>', methods=['GET'])
+def get_product(product_id):
+    connection = sqlite3.connect('Banco_products')
+    cursor = connection.cursor()
+    cursor.execute('SELECT * FROM products WHERE id = :product_id', {'product_id': product_id})
+    product = cursor.fetchone()
+    connection.close()
+
+    if product:
+        # Retorna os detalhes do produto se encontrado
+        product_details = {
+            'id': product[0],
+            'title': product[1],
+            'category': product[2],
+            'description': product[3],
+            'production_time': product[4],
+            'price': product[5],
+            'stock': product[6]
+        }
+        return jsonify(product_details)
+    else:
+        # Retorna uma mensagem de erro se o produto não for encontrado
+        return jsonify({'error': 'Produto não encontrado'}), 404
+
+
 # Rota para atualizar um produto
 @app.route('/product/<int:product_id>', methods=['PUT'])
 def update_product(product_id):
