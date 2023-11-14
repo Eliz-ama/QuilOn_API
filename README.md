@@ -6,7 +6,8 @@ Esta API tem como objetivo oferecer funcionalidades essenciais para o cadastro, 
 
 ### URL Base
 
-URL base da API é *http://127.0.0.1:5000/*
+Você deve colocar o endereço IP de sua máquina no seguinte campo:
+http://{endereco_ip_maquina}:5000/
 
 ### Instalações necessárias para a API funcionar:
 
