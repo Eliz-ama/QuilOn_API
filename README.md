@@ -1,4 +1,7 @@
-# QuilOn API
+<img src="img/quilon.png" width="150" height="150"> #  API
+
+ 
+## 🟡 Instruções para a execução do projeto
 
 ### Repositório destinado a API do E-commerce QuilOn
 
