@@ -1,7 +1,9 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import sqlite3
 
 app = Flask(__name__)
+CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 # Função para criar a tabela de produtos no banco de dados SQLite
 def create_table():
@@ -87,4 +89,4 @@ def delete_product(product_id):
 
 if __name__ == '__main__':
     create_table()  # Certifica-se de que a tabela existe antes de iniciar o aplicativo
-    app.run(debug=True)
+    app.run()
