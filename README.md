@@ -29,7 +29,7 @@ http://{endereco_ip_maquina}:5000/
 - py API.py
 ```
 
-### Para vizualizar o Banco de dados recomendo que baixe a exteção:
+### Para vizualizar o Banco de dados recomendo que baixe a extenção:
 
 - Sqlite
 
