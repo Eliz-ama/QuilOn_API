@@ -89,4 +89,4 @@ def delete_product(product_id):
 
 if __name__ == '__main__':
     create_table()  # Certifica-se de que a tabela existe antes de iniciar o aplicativo
-    app.run()
+    app.run(host="0.0.0.0")
