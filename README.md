@@ -18,6 +18,7 @@ http://{endereco_ip_maquina}:5000/
 
 ```bash
 - pip install flask
+- pip install flask-cors
 - pip install db-sqlite3
 ```
 
