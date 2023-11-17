@@ -1,26 +1,37 @@
-# QuilOn API
+#   <img src="img/quilon.png" width="150" height="150"> API
 
-### Repositório destinado a API do E-commerce QuilOn
+ 
+## 🟡 Repositório destinado a API do E-commerce QuilOn
+
 
 Esta API tem como objetivo oferecer funcionalidades essenciais para o cadastro, visualização, exclusão e atualização de informações relacionadas a produtos. Através dessa API, os representantes quilombolas desempenham um papel fundamental no gerenciamento e na manutenção desses dados, permitindo que registrem novos produtos, visualizem informações existentes, removam produtos obsoletos e atualizem detalhes importantes.
 
 ### URL Base
 
-URL base da API é *http://127.0.0.1:5000/*
+Você deve colocar o endereço IP de sua máquina no seguinte campo:
 
-### Instalações necessárias para a API funcionar:
+```bash
+http://{endereco_ip_maquina}:5000/
+```
 
-° pip install flask
+## 🟡 Instruções para a execução do projeto
 
-° pip install db-sqlite3
+```bash
+- pip install flask
+- pip install flask-cors
+- pip install db-sqlite3
+```
+
 
 ### Para executar inicie o comando:
 
-° py API.py
+```bash
+- py API.py
+```
 
-### Para vizualizar o Banco de dados recomendo que baixe a esteção:
+### Para vizualizar o Banco de dados recomendo que baixe a exteção:
 
-° Sqlite
+- Sqlite
 
 
 
