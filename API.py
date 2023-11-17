@@ -58,15 +58,35 @@ def get_products():
 # Rota para listar os IDs de todos os produtos
 @app.route('/product-ids', methods=['GET'])
 def get_product_ids():
+    category = request.args.get('category')
     connection = sqlite3.connect('Banco_products')
     cursor = connection.cursor()
-    cursor.execute('SELECT id FROM products')
+
+    if category:
+        cursor.execute('SELECT id FROM products WHERE category = :category', {'category': category})
+    else:
+        cursor.execute('SELECT id FROM products')
+
     product_ids = [product[0] for product in cursor.fetchall()]
     connection.close()
 
     return jsonify(product_ids)
 
+@app.route('/search-products', methods=['GET'])
+def search_products():
+    termo = request.args.get('term')
+    connection = sqlite3.connect('Banco_products')
+    cursor = connection.cursor()
+    cursor.execute('''
+        SELECT id FROM products
+        WHERE title LIKE ? OR category LIKE ? OR description LIKE ?
+    ''', ('%' + termo + '%', '%' + termo + '%', '%' + termo + '%'))
+    product_ids = [product[0] for product in cursor.fetchall()]
+    connection.close()
 
+    return jsonify(product_ids)
+
+# Rota para
 @app.route('/product/<int:product_id>', methods=['GET'])
 def get_product_by_id(product_id):
     connection = sqlite3.connect('Banco_products')
