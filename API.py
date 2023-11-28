@@ -24,7 +24,6 @@ def create_table():
     connection.commit()
     connection.close()
 
-
 @app.route('/upload/<image_name>', methods=['GET'])
 def get_image(image_name):
     # Caminho para a pasta uploads
@@ -59,8 +58,9 @@ def create_product():
         'stock': data['stock']
     })
     connection.commit()
-    connection.close()
     return 'Produto criado com sucesso', 201
+    
+
 
 # Rota para listar todos os produtos
 @app.route('/products', methods=['GET'])
