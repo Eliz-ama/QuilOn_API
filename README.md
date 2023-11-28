@@ -8,10 +8,22 @@ Esta API tem como objetivo oferecer funcionalidades essenciais para o cadastro, 
 
 ### URL Base
 
-Você deve colocar o endereço IP de sua máquina no seguinte campo:
+Nossa API esta sendo executada online e você pode consumi-la pelo link abaixo:
 
 ```bash
-http://{endereco_ip_maquina}:5000/
+https://quilon-api.onrender.com
+````
+
+Caso queira executa-la em sua maquina, utilizando algum software, *Postman* por exemplo, utilize o endereço abaixo com a porta padrão 5000:
+
+```bash
+http://127.0.0.1:5000/
+```
+
+Se decidir fazer seu uso em outra máquina utilize no formato do endereço abaixo:
+
+```bash
+http://endereco_ip_maquina:5000/
 ```
 
 ## 🟡 Instruções para a execução do projeto
