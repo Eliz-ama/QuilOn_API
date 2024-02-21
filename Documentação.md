@@ -8,7 +8,7 @@ Esta documentação descreve a API do aplicativo QuilOn, que fornece acesso a re
 
 **Data de lançamento:** 2023-09-27
 
-**Base URL:** https://quilon-api.onrender.com/
+**Base URL:** https://quilon-api.onrender.com
 
 **Endereços da API**
 
@@ -22,4 +22,9 @@ Esta documentação descreve a API do aplicativo QuilOn, que fornece acesso a re
 | PUT | /product/<int:product_id> | Atualiza um produto pelo id |
 | DELETE | /product/<int:product_id> | Deleta um produto pelo id |
 
-**Exemplo de uso da API**
+**Exemplo de requisição da API**
+
+https://quilon-api.onrender.com/upload/1
+https://quilon-api.onrender.com/products
+https://quilon-api.onrender.com/product_ids
+https://quilon-api.onrender.com/product/1
