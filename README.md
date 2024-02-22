@@ -1,10 +1,20 @@
 #   <img src="img/quilon.png" width="150" height="150"> API
 
  
-## 🟡 Repositório destinado a API do E-commerce QuilOn
+## 🟡 Documentação da API
 
 
 Esta API tem como objetivo oferecer funcionalidades essenciais para o cadastro, visualização, exclusão e atualização de informações relacionadas a produtos. Através dessa API, os representantes quilombolas desempenham um papel fundamental no gerenciamento e na manutenção desses dados, permitindo que registrem novos produtos, visualizem informações existentes, removam produtos obsoletos e atualizem detalhes importantes.
+
+
+### **Versão da API:** 1.0
+
+
+
+
+**Data de lançamento:** 2023-09-27
+
+
 
 ### URL Base
 
@@ -14,36 +24,73 @@ Nossa API esta sendo executada online e você pode consumi-la pelo link abaixo:
 https://quilon-api.onrender.com
 ````
 
-Caso queira executa-la em sua maquina, utilizando algum software, *Postman* por exemplo, utilize o endereço abaixo com a porta padrão 5000:
+
+URL teste:
 
 ```bash
 http://127.0.0.1:5000/
 ```
 
-Se decidir fazer seu uso em outra máquina utilize no formato do endereço abaixo:
 
+**Endereços da API**
+
+| Tipo | Caminho | Observação |
+|---|---|---|
+| GET | /upload/<image_name> | Retorna uma imagem |
+| POST | /product | Cria um novo produto |
+| GET | /products | Retorna a lista com todos os produtos |
+| GET | /product-ids | Lista os ids de todos os produtos |
+| GET | /product/<int:product_id> | Busca um produto pelo id |
+| PUT | /product/<int:product_id> | Atualiza um produto pelo id |
+| DELETE | /product/<int:product_id> | Deleta um produto pelo id |
+
+## 🟡 **Exemplo de requisição da API**
+
+GET
 ```bash
-http://endereco_ip_maquina:5000/
+https://quilon-api.onrender.com/upload/1
 ```
+- 304 Imagem retornada com sucesso
+- 404 Imagem não encontrada
 
-## 🟡 Instruções para a execução do projeto
 
+POST
 ```bash
-- pip install flask
-- pip install flask-cors
-- pip install db-sqlite3
+https://quilon-api.onrender.com/product
 ```
+- 201 Produto criado com sucesso.
 
-
-### Para executar inicie o comando:
-
+GET
 ```bash
-- py API.py
+https://quilon-api.onrender.com/products
 ```
+- 200 Lista de produtos retornada com sucesso.
 
-### Para vizualizar o Banco de dados recomendo que baixe a exteção:
+GET
+```bash
+https://quilon-api.onrender.com/product_ids
+```
+- 200 Lista de ids retornada com sucesso.
 
-- Sqlite
+GET
+```bash
+https://quilon-api.onrender.com/product/1
+```
+- 200 Produto encontrado com sucesso.
+- 404 Produto não encontrado.
+
+PUT
+```bash
+https://quilon-api.onrender.com/product/1
+```
+- 200 Produto atualizado com sucesso.
+
+DELETE
+```bash
+https://quilon-api.onrender.com/product/1
+```
+- 200 Produto excluido com sucesso.
+
 
 
 
