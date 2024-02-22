@@ -53,24 +53,31 @@ https://quilon-api.onrender.com/upload/1
 - 304 Imagem retornada com sucesso
 - 404 Imagem não encontrada
 
+<br>
 
 POST
 ```bash
 https://quilon-api.onrender.com/product
 ```
 - 201 Produto criado com sucesso.
+  
+<br>
 
 GET
 ```bash
 https://quilon-api.onrender.com/products
 ```
 - 200 Lista de produtos retornada com sucesso.
+  
+<br>
 
 GET
 ```bash
 https://quilon-api.onrender.com/product_ids
 ```
 - 200 Lista de ids retornada com sucesso.
+
+<br>
 
 GET
 ```bash
@@ -79,11 +86,15 @@ https://quilon-api.onrender.com/product/1
 - 200 Produto encontrado com sucesso.
 - 404 Produto não encontrado.
 
+<br>
+
 PUT
 ```bash
 https://quilon-api.onrender.com/product/1
 ```
 - 200 Produto atualizado com sucesso.
+
+<br>
 
 DELETE
 ```bash
